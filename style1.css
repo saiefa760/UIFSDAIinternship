@@ -1,5 +1,5 @@
  header {
-      background-color:rgb(38, 37, 37);
+      background-color:rgba(167, 166, 166, 0.208);
       padding: 10px;
       display: flex;
       justify-content: flex-end; 
@@ -15,25 +15,55 @@
       
     } 
     body{
-    background-color: rgb(222, 218, 218);
-    padding: 30px 10px;
+    background-color: black;
+   background-size: cover;
+    padding: 30px 30px;
+    margin: 50px;
+    font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+    }
+
+    @media screen and (max-width: 700px) {
+      body{
+        background-color: black;
+      }
+      
     }
    
     .about{
      padding: 20px ;
-     text-align: right;
+     text-align: left;
+     /* font-size: 24px;
+      */
+     
 }
    .box{
     background-color: rgb(255, 255, 255);
-    padding: 100px 50px;
-    margin:10px;
+    padding: 50px 50px;
+    margin:50px 50px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-   }
+    background-color: rgba(61, 61, 61, 0.323);
+    background-size: cover;
+    color:white;
+    /
+  }
+
+   .box2{
+    /* background-color: rgb(255, 255, 255);
+    padding: 50px 50px;
+    margin:50px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(185, 184, 184, 0.538);
+    background-size: cover; */ */
+    color:  rgb(0, 0, 0); 
+    
+  }
    .box1{
-    background-color: rgb(0, 0, 0);
-    padding: 100px;
-    margin:10px;
+    background-color: rgba(0, 0, 0, 0.395);
+    padding: 50px 50px;
+    /* margin: 5px 50px; */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
    }
@@ -43,3 +73,88 @@
     font-family: cursive;
     color: white;
    }
+   .edu{
+    text-align: left;
+   }
+    .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-group {
+            background-color: rgb(20, 20, 20);
+            padding: 30px;
+            border-top: 4px solid white;
+        }
+
+        .skill-group h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .skill-group p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .skills-container:hover{
+            box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.673);
+            
+            
+        }
+
+        .projects-list {
+            list-style: none;
+        }
+
+        .projects-list li {
+            background-color: rgb(20, 20, 20);
+            padding: 30px;
+            margin: 25px 0;
+            border-left: 4px solid white;
+        }
+
+        .projects-list h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .project-meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 12px;
+        }
+
+        .projects-list p {
+            color: #aaa;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+  .projects-list li:hover{
+            box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.673);
+            
+            
+        }
+         .contact-btn {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 14px 40px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .contact-btn:hover {
+            background-color: transparent;
+            color: white;
+        }
