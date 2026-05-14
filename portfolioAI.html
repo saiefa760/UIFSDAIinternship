@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiefa Niareen - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgb(38, 37, 37);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 14px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid white;
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
+        .hero {
+            background: linear-gradient(to right, rgb(38, 37, 37), rgb(60, 59, 59));
+            padding: 100px 50px;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #aaaaaa;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 12px 35px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 50px;
+        }
+
+        section {
+            margin: 60px 0;
+        }
+
+        section h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            border-left: 5px solid white;
+            padding-left: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .about-content {
+            background-color: rgb(20, 20, 20);
+            padding: 40px;
+            border-left: 4px solid rgb(38, 37, 37);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .education-list {
+            list-style: none;
+        }
+
+        .education-list li {
+            background-color: rgb(20, 20, 20);
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 4px solid white;
+            font-size: 16px;
+        }
+
+        .education-list strong {
+            color: white;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .education-list span {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-group {
+            background-color: rgb(20, 20, 20);
+            padding: 30px;
+            border-top: 4px solid white;
+        }
+
+        .skill-group h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .skill-group p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .projects-list {
+            list-style: none;
+        }
+
+        .projects-list li {
+            background-color: rgb(20, 20, 20);
+            padding: 30px;
+            margin: 25px 0;
+            border-left: 4px solid white;
+        }
+
+        .projects-list h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .project-meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 12px;
+        }
+
+        .projects-list p {
+            color: #aaa;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .contact-section {
+            background-color: rgb(38, 37, 37);
+            padding: 60px 50px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-section h2 {
+            border: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .contact-section p {
+            font-size: 16px;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 14px 40px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .contact-btn:hover {
+            background-color: transparent;
+            color: white;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        footer {
+            background-color: black;
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgb(50, 49, 49);
+            font-size: 13px;
+            color: #666;
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+
+            nav a {
+                margin: 10px 15px;
+            }
+
+            .hero {
+                padding: 60px 30px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            section h2 {
+                font-size: 30px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SNT</div>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1>Saiefa Niareen T</h1>
+            <p>Technology Enthusiast | Creative Designer | Problem Solver</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </section>
+
+        <div class="container">
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>I am a dedicated and curious student with a strong passion for technology and creative design. I enjoy exploring new skills and diving into different areas such as programming, data structures, and digital design.</p>
+                    <p>I believe in being organized, responsible, and always prepared for challenges. Currently, I am focused on enhancing my technical knowledge and gaining practical experience through meaningful projects and internships.</p>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Education</h2>
+                <ul class="education-list">
+                    <li>
+                        <strong>Undergraduate Student</strong>
+                        <span>Marudhar Kesari Jain College</span>
+                        <p style="margin-top: 8px; color: #888;">Pursuing degree in Computer Science with strong focus on programming and data structures.</p>
+                    </li>
+                    <li>
+                        <strong>Higher Secondary Education</strong>
+                        <p style="margin-top: 8px; color: #888;">Completed with a strong academic record</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-group">
+                        <h3>Technical Skills</h3>
+                        <p><strong>Languages:</strong> C++, Python, Java (Basic), RDBMS</p>
+                        <p style="margin-top: 12px;"><strong>Concepts:</strong> Data Structures, Linked Lists, Data Mining Basics</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Tools & Software</h3>
+                        <p>Canva, MS Word, PowerPoint, HTML/CSS, Git</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Soft Skills</h3>
+                        <p>Communication, Time Management, Problem Solving, Organization, Leadership</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul class="projects-list">
+                    <li>
+                        <h3>Travel Website Design</h3>
+                        <div class="project-meta">Tool: Canva</div>
+                        <p>Created a visually appealing travel website design with pages for popular destinations including Goa, Manali, and Jaipur. Focused on intuitive layout, user-friendly navigation, and compelling content presentation.</p>
+                    </li>
+                    <li>
+                        <h3>Data Structure Implementation</h3>
+                        <div class="project-meta">Language: C++</div>
+                        <p>Implemented various data structures including linked lists and practiced problem-solving techniques. Focused on understanding memory management and algorithmic efficiency.</p>
+                    </li>
+                    <li>
+                        <h3>Academic Assignments</h3>
+                        <div class="project-meta">Topics: Programming & Data Concepts</div>
+                        <p>Completed multiple assignments covering programming fundamentals, data mining basics, and practical implementation of learned concepts.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always interested in connecting with fellow tech enthusiasts and exploring new opportunities.</p>
+            <button class="contact-btn" onclick="location.href='form.html'">Send Message</button>
+            <div class="contact-info">
+                <p>📧 saiefa.niareen@example.com</p>
+                <p>📍 India</p>
+                <p>Status: Open to Internships & Opportunities</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Saiefa Niareen T. All rights reserved. | Designed with passion</p>
+    </footer>
+</body>
+</html>
